@@ -1,12 +1,18 @@
 {% extends "layout.html" %}
 {% block body %}
-    <h1 class="title">{{ title }}</h1>
-    <h2 class="subtitle">Question</h2>
-    Question: {{ qtext }}
+    <script>
+    <!-- from w3school tutorial -->
+    $(document).ready(function(){
+     $('[data-toggle="tooltip"]').tooltip();
+    });
+    </script>
+
+    <h1 data-toggle="tooltip" data-placement="bottom" title="Question: {{ qtext }}" style="text-align: center; padding-top: 2rem">
+    {{ title }}</h1>
 
     <div class = "chart">
-    <h2 class="subtitle">Chart</h2>
-    <img src="{{ chart }}" alt="Count Plot {{ title }}">
+        <h3 class="subtitle">Chart</h3>
+        <img src="{{ chart }}" alt="Count Plot {{ title }}">
     </div>
 
 {% endblock %}

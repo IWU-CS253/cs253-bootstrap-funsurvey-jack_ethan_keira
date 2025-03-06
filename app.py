@@ -3,11 +3,12 @@ import base64
 from flask import Flask, render_template
 import pandas as pd
 import seaborn as sns
+import matplotlib
 import matplotlib.pyplot as plt
 from dfprep import prepare_dataframe, get_data, renamelist
 
+matplotlib.use('Agg')
 local_data = True
-
 if local_data == False:
     # get and prep the dataframe, gets data from url, requires Python SSL certificates setup correctly
     url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRkK73xD192AdP0jZe6ac9cnVPSeqqbYZmSPnhY2hnY8ANROAOCStRFdvjwFoapv3j2rzMtZ91KXPFm/pub?output=csv"

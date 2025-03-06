@@ -1,14 +1,11 @@
 {% extends "layout.html" %}
 {% block body %}
-    <h2>Survey Data</h2>
-
-    <ul>
-        <li><b>You can take the survey <a href="https://docs.google.com/forms/d/e/1FAIpQLSfWw-znStt5iF2Dc7eIoXNn24Ulxhm9fEDVggtAxoAyXLfyIA/viewform">here</a>.</b></li>
-        <li><b>Total responses submitted</b>: {{ responses }} </li>
-        <li><b>Date/Time first response</b>: {{ first }}</li>
-        <li><b>Date/Time most recent response</b>: {{ last }}</li>
-    </ul>
-
+    <h2><a href="https://docs.google.com/forms/d/e/1FAIpQLSfWw-znStt5iF2Dc7eIoXNn24Ulxhm9fEDVggtAxoAyXLfyIA/viewform">Survey</a> Data</h2>
+    <div class="panel panel-info">
+            <div class="panel-heading"><b>Total responses submitted</b>: {{ responses }} </div>
+            <div class="panel-body"><b>Date/Time first response</b>: {{ first }}</div>
+            <div class="panel-footer"><b>Date/Time most recent response</b>: {{ last }}</div>
+    </div>
     <hr>
     <h2>Survey Questions</h2>
     <table class="table table-striped table-bordered table-condensed table-hover">

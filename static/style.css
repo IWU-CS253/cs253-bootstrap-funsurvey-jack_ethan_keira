@@ -1,7 +1,11 @@
 .container {
     display: flex;
     flex-direction: row;
-    align-items: start; /* Ensures items are aligned at the top */
+    align-items: end; /* Ensures items are aligned at the top */
+}
+
+.dropdown-menu {
+
 }
 
 .left-column {
